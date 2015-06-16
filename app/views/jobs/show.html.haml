@@ -1,8 +1,11 @@
-
-		%h1= @job.Titulli
+#jobs
+	.job
+		%h2= @job.Titulli
 		%p= @job.Pershkrimi
 		%p= @job.kompania
-		
-		= link_to "Home", root_path
-		= link_to "Edit", edit_job_path(@job)
-		= link_to "Delete", job_path(@job)method: :delete, data: { confirm: "Jeni i sigurte?" }
+		%button.btn.btn-default= link_to "Apliko per te depozituar pune", @job.url
+
+#links
+	= link_to "Back", root_path, class: "btn btn-sm btn-default"
+	= link_to "Edit", edit_job_path(@job), class: "btn btn-sm btn-default"
+	= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "A jeni i sigurte?" }, class: "btn btn-sm btn-default"

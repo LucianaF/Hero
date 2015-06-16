@@ -1,17 +1,16 @@
 class JobsController < ApplicationController
- before_action :find_job,only:[:show,:edit,:update,:destroy]
+	before_action :find_job, only: [:show, :edit, :update, :destroy]
 
-
- def index
- 	if params[:category].blank?
- 	@jobs = Job.all.order("created_at DESC")
- 	else
+	def index
+		if params[:category].blank?
+			@jobs = Job.all.order("created_at DESC")
+		else
 			@category_id = Category.find_by(emri: params[:category]).id
 			@jobs = Job.where(category_id: @category_id).order("created_at DESC")
- end
- end
- 
- def show
+		end
+	end
+
+	def show
 	end
 
 	def new
@@ -47,7 +46,7 @@ class JobsController < ApplicationController
 	private
 
 	def jobs_params
-		params.require(:job).permit(:Titulli, :Pershkrimi, :kompania, :url,:category_id )
+		params.require(:job).permit(:Titulli, :Pershkrimi, :kompania, :url, :category_id)
 	end
 
 	def find_job

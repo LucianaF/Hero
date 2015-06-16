@@ -1,8 +1,5 @@
 #jobs
 	- @jobs.each do |job|
 		.job
-			%h2= link_to job.Titulli,job
+			%h2= link_to job.Titulli, job
 			%p= job.kompania
-
-			=Link_to "New Job",new_job_path
-			=Link_to "Edit", edit_job_path(@job)
