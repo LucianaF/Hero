@@ -1,0 +1,8 @@
+= simple_form_for(@job, html: { class: 'form-horizontal'}) do |f|
+	
+	= f.input :Titulli, label: "  Titulli i Punes" 
+	= f.input :Pershkrimi, label: "  Pershkrimi i Punes"
+	= f.input :kompania, label: "  Kompania juaj"
+	= f.input :url, label: "  Link per tek puna"
+	%br/
+	= f.button :submit
