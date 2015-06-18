@@ -2,9 +2,9 @@
 	
 	= f.collection_select :category_id, Category.all, :id, :emri, {promt: "Zgjidh nje Raport" }, input_html: { class: "dropdown-toggle" }
 	
-	= f.input :Titulli, label: "Titulli i Punes" , input_html: { class: "form-control" }
-	= f.input :Pershkrimi, label: "Pershkrimi i Punes" , input_html: { class: "form-control" }
+	= f.input :Titulli, label: "Titulli i Raportit" , input_html: { class: "form-control" }
+	= f.input :Pershkrimi, label: "Pershkrimi " , input_html: { class: "form-control" }
 	= f.input :kompania, label: "Kompania juaj" , input_html: { class: "form-control" }
-	= f.input :url, label: "Link per tek puna" , input_html: { class: "form-control" }
+	= f.input :url, label: "Link nderlidhes" , input_html: { class: "form-control" }
 	%br/
 	= f.button :submit 
