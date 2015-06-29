@@ -29,4 +29,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 
 gem "omniauth", "~> 1.1.1"
-gem "omniauth-facebook", "~> 1.4.1"
+gem "omniauth-facebook", "~> 1.4.0"
